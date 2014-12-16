@@ -22,12 +22,12 @@
         $('.ovpred-units-content').toggle('fast');
 
         // Determine which aria-expanded state to use.
-        switch ($('.ovpred-units-content').attr('aria-expanded')) {
+        switch ($('.ovpred-units-title').attr('aria-expanded')) {
           case 'true':
-            $('.ovpred-units-content').attr('aria-expanded','false');
+            $('.ovpred-units-title').attr('aria-expanded','false');
             break;
           case 'false':
-            $('.ovpred-units-content').attr('aria-expanded','true');
+            $('.ovpred-units-title').attr('aria-expanded','true');
             break;
         }
       });
