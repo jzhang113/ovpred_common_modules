@@ -36,7 +36,7 @@ function ovpred_blocks_block_info() {
   );
 
   $blocks['ovpred_units'] = array(
-    'info' => t('Reporting units'),
+    'info' => t('Research and Economic Development units'),
     'cache' => DRUPAL_CACHE_GLOBAL,
     'region' => 'sub_footer',
     'status' => 1,
@@ -331,7 +331,7 @@ function ovpred_blocks_units_content() {
         'link' => array(
           '#prefix' => '<a href="#tab1focus" id="tab1" class="tab ovpred-units-title" role="tab" aria-selected="true" aria-expanded="false" tabindex="0">',
           '#suffix' => '</a>',
-          '#markup' => t('Reporting units'),
+          '#markup' => t('Research and Economic Development units'),
         ),
         '#suffix' => '</h2></div>',
       ),
@@ -344,6 +344,7 @@ function ovpred_blocks_units_content() {
           '#title' => t('Research Administration'),
           '#theme' => 'item_list',
           '#items' => array(
+            l('Office of Research and Economic Development', 'http://research.uiowa.edu/'),
             l('Office of Animal Resources', 'http://animal.research.uiowa.edu/'),
             l('Conflict of Interest in Research Office', 'http://coi.research.uiowa.edu/'),
             l('Division of Sponsored Programs', 'http://dsp.research.uiowa.edu/'),
