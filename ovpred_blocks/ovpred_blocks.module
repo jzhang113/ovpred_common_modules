@@ -329,7 +329,7 @@ function ovpred_blocks_units_content() {
       'title' => array(
         '#prefix' => '<div id="tab-container" role="tablist"><h2>',
         'link' => array(
-          '#prefix' => '<a href="#tab1focus" id="tab1" class="tab ovpred-units-title" role="tab" aria-selected="true" aria-expanded="false" tabindex="0">',
+          '#prefix' => '<a href="#tab1focus" id="tab1" class="tab ovpred-units-title" role="tab" aria-selected="true" aria-expanded="false" tabindex="0" title="Click to expand">',
           '#suffix' => '</a>',
           '#markup' => t('Research and Economic Development units'),
         ),
