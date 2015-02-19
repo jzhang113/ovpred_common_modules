@@ -204,8 +204,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_sub_ovpred_article_img_ovrrde'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_img_ovrrde'] = array(
+  // Exported field_instance: 'node-ovpred_sub_article-field_sub_ovpred_article_img_ovr'
+  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'] = array(
     'bundle' => 'ovpred_sub_article',
     'deleted' => 0,
     'description' => 'Upload an image to support this content and override the one provided by Iowa Now.',
@@ -233,7 +233,7 @@ function ovpred_sub_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_img_ovrrde',
+    'field_name' => 'field_ovpred_sub_article_img_ovr',
     'label' => 'Image Override',
     'required' => 0,
     'settings' => array(
@@ -286,8 +286,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_iowanow_url'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_iowanow_url'] = array(
+  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_ian_url'
+  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ian_url'] = array(
     'bundle' => 'ovpred_sub_article',
     'default_value' => NULL,
     'deleted' => 0,
@@ -313,7 +313,7 @@ function ovpred_sub_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_iowanow_url',
+    'field_name' => 'field_ovpred_sub_article_ian_url',
     'label' => 'IowaNow URL',
     'required' => 0,
     'settings' => array(
