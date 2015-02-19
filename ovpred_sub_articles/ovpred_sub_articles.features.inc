@@ -22,7 +22,7 @@ function ovpred_sub_articles_ctools_plugin_api($module = NULL, $api = NULL) {
 function ovpred_sub_articles_image_default_styles() {
   $styles = array();
 
-  // Exported image style: ovpred_article_teaser.
+  // Exported image style: ovpred_sub_article_teaser.
   $styles['ovpred_sub_article_teaser'] = array(
     'name' => 'ovpred_sub_article_teaser',
     'label' => 'OVPRED Subsite Article Teaser',

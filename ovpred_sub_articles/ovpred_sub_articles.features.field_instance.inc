@@ -1,7 +1,7 @@
 <?php
 /**
  * @file
- * ovpred_articles.features.field_instance.inc
+ * ovpred_sub_articles.features.field_instance.inc
  */
 
 /**
@@ -122,6 +122,68 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_ian_url'
+  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ian_url'] = array(
+    'bundle' => 'ovpred_sub_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'The URL to the Iowa Now article on now.uiowa.edu.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 8,
+      ),
+      'ovpred_sub_article_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ovpred_sub_article_teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 3,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ovpred_sub_article_ian_url',
+    'label' => 'IowaNow URL',
+    'required' => 0,
+    'settings' => array(
+      'absolute_url' => 1,
+      'attributes' => array(
+        'class' => '',
+        'configurable_class' => 0,
+        'configurable_title' => 0,
+        'rel' => '',
+        'target' => 'default',
+        'title' => '',
+      ),
+      'display' => array(
+        'url_cutoff' => '',
+      ),
+      'enable_tokens' => 1,
+      'rel_remove' => 'default',
+      'title' => 'none',
+      'title_label_use_field_label' => 0,
+      'title_maxlength' => 255,
+      'title_value' => '',
+      'url' => 0,
+      'user_register_form' => FALSE,
+      'validate_url' => 1,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'link',
+      'settings' => array(),
+      'type' => 'link_field',
+      'weight' => 3,
+    ),
+  );
+
   // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_image'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_image'] = array(
     'bundle' => 'ovpred_sub_article',
@@ -204,7 +266,7 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_sub_ovpred_article_img_ovr'
+  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'] = array(
     'bundle' => 'ovpred_sub_article',
     'deleted' => 0,
@@ -283,68 +345,6 @@ function ovpred_sub_articles_field_default_field_instances() {
       ),
       'type' => 'media_generic',
       'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_ian_url'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ian_url'] = array(
-    'bundle' => 'ovpred_sub_article',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'The URL to the Iowa Now article on now.uiowa.edu.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 8,
-      ),
-      'ovpred_sub_article_list' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-      'ovpred_sub_article_teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 3,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_ian_url',
-    'label' => 'IowaNow URL',
-    'required' => 0,
-    'settings' => array(
-      'absolute_url' => 1,
-      'attributes' => array(
-        'class' => '',
-        'configurable_class' => 0,
-        'configurable_title' => 0,
-        'rel' => '',
-        'target' => 'default',
-        'title' => '',
-      ),
-      'display' => array(
-        'url_cutoff' => '',
-      ),
-      'enable_tokens' => 1,
-      'rel_remove' => 'default',
-      'title' => 'none',
-      'title_label_use_field_label' => 0,
-      'title_maxlength' => 255,
-      'title_value' => '',
-      'url' => 0,
-      'user_register_form' => FALSE,
-      'validate_url' => 1,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'link',
-      'settings' => array(),
-      'type' => 'link_field',
-      'weight' => 3,
     ),
   );
 
