@@ -1,0 +1,110 @@
+<?php
+/**
+ * @file
+ * Code for the OVPRED Subsite Article feature.
+ */
+
+include_once 'ovpred_sub_article.features.inc';
+
+function ovpred_sub_article_form_alter(&$form) {
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter.
+ */
+function ovpred_sub_article_form_article_node_form_alter(&$form, &$form_state, $form_id) {
+
+  // Add states relating to the type of Article.
+
+  //////////////// NOT FIXED YET ////////////
+  //////////////// NOT FIXED YET ////////////
+  //////////////// NOT FIXED YET ////////////
+
+  $form['field_article_iowanow_url']['#states'] = array(
+    'visible' => array(
+      array(
+        array(':input[name="field_article_type[und]"]' => array('value' => 'article_iowanow')),
+      ),
+    ),
+  );
+
+  $form['field_article_image_override']['#states'] = array(
+    'visible' => array(
+      array(
+        array(':input[name="field_article_type[und]"]' => array('value' => 'article_iowanow')),
+      ),
+    ),
+  );
+
+  $form['field_article_external_url']['#states'] = array(
+    'visible' => array(
+      array(
+        array(':input[name="field_article_type[und]"]' => array('value' => 'article_external_publication')),
+      ),
+    ),
+  );
+
+  $form['field_article_source']['#states'] = array(
+    'visible' => array(
+      array(
+        array(':input[name="field_article_type[und]"]' => array('value' => 'article_external_publication')),
+      ),
+    ),
+  );
+}
+
+/**
+ * Implements hook_preprocess_node().
+ */
+function ovpred_sub_article_preprocess_node(&$variables) {
+  if($variables['type'] == 'ovpred_sub_article') {
+    // Create a new theme hook suggestion for node--article--iowanow.tpl.php
+    // to be used instead of node--article.tpl.php
+    $suggestion = 'node__ovpred_sub_article__iowanow';
+    $variables['theme_hook_suggestions'][] = $suggestion;
+    $variables['theme_hook_suggestions'][] = $suggestion . '__' . $variables['view_mode'];
+
+    if(!empty($variables['field_ovpred_sub_article_iowanow_url'])) {
+      $iowanow = $variables['field_ovpred_sub_article_iowanow_url'][LANGUAGE_NONE][0]['url'];
+      $variables['node_url'] = $iowanow;
+      if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
+        $variables['content']['links']['node']['#links']['node-readmore']['href'] = $iowanow;
+      }
+    }
+
+    if(!empty($variables['field_ovpred_sub_article_external_url'])) {
+      $external = $variables['field_ovpred_sub_article_external_url'][LANGUAGE_NONE][0]['url'];
+      $variables['node_url'] = $external;
+      if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
+        $variables['content']['links']['node']['#links']['node-readmore']['href'] = $external;
+      }
+    }
+
+    if(!empty($variables['field_ovpred_sub_article_image_override']) || !empty($variables['field_ovpred_sub_article_image'])) {
+      $variables['has_image'] = TRUE;
+    }
+
+    if(!empty($variables['field_ovpred_sub_article_image_override'])) {
+      $variables['image_override'] = TRUE;
+    }
+
+    if(!empty($variables['field_ovpred_sub_article_image'])) {
+      $variables['image_default'] = TRUE;
+    }
+  }
+}
+
+/**
+ * Implements hook_feeds_after_save().
+ */
+function ovpred_sub_article_feeds_after_save(FeedsSource $source, $entity, $item, $entity_id) {
+  if ($source->id == ('iowa_now_article_research' || 'iowa_now_articles_ed')) {
+    if(!empty($entity->field_article_image)) {
+      // Load the file.
+      $file = file_load($entity->field_article_image[LANGUAGE_NONE][0]['fid']);
+      // Save provided alt text to the field on the file entity.
+      $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] = $entity->field_article_image[LANGUAGE_NONE][0]['alt'];
+      file_save($file);
+    }
+  }
+}

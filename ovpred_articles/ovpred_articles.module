@@ -1,7 +1,0 @@
-<?php
-/**
- * @file
- * Code for the OVPRED Articles feature.
- */
-
-include_once 'ovpred_articles.features.inc';
