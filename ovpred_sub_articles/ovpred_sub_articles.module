@@ -27,26 +27,22 @@ function ovpred_sub_articles_entity_info_alter(&$entity_info) {
 
 /**
  * Implements hook_node_view_alter().
- *
- * Allows us to add Read More to our custom view mode.
  */
 function ovpred_sub_articles_node_view_alter(&$build) {
   if ($build['#view_mode'] == 'ovpred_sub_article_teaser') {
     $node=$build['#node'];
     $links=array();
+
     $node_title_stripped = strip_tags($node->title);
     $links['node-readmore'] = array(
       'title' => t('Read more<span class="element-invisible"> about @title</span>', array('@title' => $node_title_stripped)),
       'href' => 'node/' . $node->nid,
       'html' => TRUE,
-      'attributes' => array('rel' => 'tag', 'title' => $node_title_stripped)
+      'attributes' => array('rel' => 'tag', 'title' => $node_title_stripped),
     );
     // Assign links
     $build['links']['node']['#links']=$links;
   }
-}
-
-function ovpred_sub_articles_form_alter(&$form) {
 }
 
 /**
