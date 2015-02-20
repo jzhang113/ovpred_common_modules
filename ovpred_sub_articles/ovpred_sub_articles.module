@@ -6,86 +6,116 @@
 
 include_once 'ovpred_sub_articles.features.inc';
 
+/**
+ * Implements hook_entity_info_alter().
+ */
+function ovpred_sub_articles_entity_info_alter(&$entity_info) {
+  $entity_info['file']['view modes']['ovpred_sub_article_teaser'] = array(
+    'label' => t('OVPRED Article Teaser'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['node']['view modes']['ovpred_sub_article_list'] = array(
+    'label' => t('OVPRED Article List'),
+    'custom settings' => TRUE,
+  );
+  $entity_info['node']['view modes']['ovpred_sub_article_teaser'] = array(
+    'label' => t('OVPRED Article Teaser'),
+    'custom settings' => TRUE,
+  );
+}
+
+
+/**
+ * Implements hook_node_view_alter().
+ *
+ * Allows us to add Read More to our custom view mode.
+ */
+function ovpred_sub_articles_node_view_alter(&$build) {
+  if ($build['#view_mode'] == 'ovpred_sub_article_teaser') {
+    $node=$build['#node'];
+    $links=array();
+    $node_title_stripped = strip_tags($node->title);
+    $links['node-readmore'] = array(
+      'title' => t('Read more<span class="element-invisible"> about @title</span>', array('@title' => $node_title_stripped)),
+      'href' => 'node/' . $node->nid,
+      'html' => TRUE,
+      'attributes' => array('rel' => 'tag', 'title' => $node_title_stripped)
+    );
+    // Assign links
+    $build['links']['node']['#links']=$links;
+  }
+}
+
 function ovpred_sub_articles_form_alter(&$form) {
 }
 
 /**
  * Implements hook_form_FORM_ID_alter.
  */
-function ovpred_sub_articles_form_article_node_form_alter(&$form, &$form_state, $form_id) {
+function ovpred_sub_articles_form_ovpred_sub_article_node_form_alter(&$form, &$form_state, $form_id) {
 
-  // Add states relating to the type of Article.
+  // Add states relating to the type of OVPRED Sub Article.
+  $form['field_ovpred_sub_article_ian_url']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_ovpred_sub_article_type[und]"]' => array('value' => 'ianow'),
+    ),
+  );
 
-  //////////////// NOT FIXED YET ////////////
-  // $form['field_article_iowanow_url']['#states'] = array(
-  //   'visible' => array(
-  //     array(
-  //       array(':input[name="field_article_type[und]"]' => array('value' => 'article_iowanow')),
-  //     ),
-  //   ),
-  // );
-  //
-  // $form['field_article_image_override']['#states'] = array(
-  //   'visible' => array(
-  //     array(
-  //       array(':input[name="field_article_type[und]"]' => array('value' => 'article_iowanow')),
-  //     ),
-  //   ),
-  // );
-  //
-  // $form['field_article_external_url']['#states'] = array(
-  //   'visible' => array(
-  //     array(
-  //       array(':input[name="field_article_type[und]"]' => array('value' => 'article_external_publication')),
-  //     ),
-  //   ),
-  // );
-  //
-  // $form['field_article_source']['#states'] = array(
-  //   'visible' => array(
-  //     array(
-  //       array(':input[name="field_article_type[und]"]' => array('value' => 'article_external_publication')),
-  //     ),
-  //   ),
-  // );
+  $form['field_ovpred_sub_article_img_ovr']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_ovpred_sub_article_type[und]"]' => array('value' => 'ianow'),
+    ),
+  );
+
+  $form['field_ovpred_sub_article_ext_url']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_ovpred_sub_article_type[und]"]' => array('value' => 'external'),
+    ),
+  );
+
+  $form['field_ovpred_sub_article_source']['#states'] = array(
+    'visible' => array(
+      ':input[name="field_ovpred_sub_article_type[und]"]' => array('value' => 'external'),
+    ),
+  );
 }
 
 /**
  * Implements hook_preprocess_node().
  */
 function ovpred_sub_articles_preprocess_node(&$variables) {
-  if($variables['type'] == 'ovpred_sub_articles') {
-    // Create a new theme hook suggestion for node--article--iowanow.tpl.php
+  if($variables['type'] == 'ovpred_sub_article') {
+    // Create a new theme hook suggestion for node--ovpred_sub_article--iowanow.tpl.php
     // to be used instead of node--article.tpl.php
-    $suggestion = 'node__ovpred_sub_articles__ian';
+    $suggestion = 'node__ovpred_sub_article';
     $variables['theme_hook_suggestions'][] = $suggestion;
     $variables['theme_hook_suggestions'][] = $suggestion . '__' . $variables['view_mode'];
 
-    // if(!empty($variables['field_ovpred_sub_articles_iowanow_url'])) {
-    //   $iowanow = $variables['field_ovpred_sub_articles_iowanow_url'][LANGUAGE_NONE][0]['url'];
-    //   $variables['node_url'] = $iowanow;
-    //   if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
-    //     $variables['content']['links']['node']['#links']['node-readmore']['href'] = $iowanow;
-    //   }
-    // }
+    if(!empty($variables['field_ovpred_sub_article_ian_url'])) {
+      $iowanow = $variables['field_ovpred_sub_article_ian_url'][LANGUAGE_NONE][0]['url'];
+      $variables['node_url'] = $iowanow;
+      if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
+        $variables['content']['links']['node']['#links']['node-readmore']['href'] = $iowanow;
+      }
+    }
 
-    if(!empty($variables['field_ovpred_sub_articles_external_url'])) {
-      $external = $variables['field_ovpred_sub_articles_external_url'][LANGUAGE_NONE][0]['url'];
+    if(!empty($variables['field_ovpred_sub_article_external_url'])) {
+      $external = $variables['field_ovpred_sub_article_external_url'][LANGUAGE_NONE][0]['url'];
       $variables['node_url'] = $external;
       if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
         $variables['content']['links']['node']['#links']['node-readmore']['href'] = $external;
       }
     }
 
-    // if(!empty($variables['field_ovpred_sub_articles_image_override']) || !empty($variables['field_ovpred_sub_articles_image'])) {
-    //   $variables['has_image'] = TRUE;
-    // }
-    //
-    // if(!empty($variables['field_ovpred_sub_articles_image_override'])) {
-    //   $variables['image_override'] = TRUE;
-    // }
+    if(!empty($variables['field_ovpred_sub_article_img_ovr']) || !empty($variables['field_ovpred_sub_article_image'])) {
+      $variables['has_image'] = TRUE;
+    }
 
-    if(!empty($variables['field_ovpred_sub_articles_image'])) {
+    if(!empty($variables['field_ovpred_sub_article_img_ovr'])) {
+      $variables['image_override'] = TRUE;
+    }
+
+    if(!empty($variables['field_ovpred_sub_article_image'])) {
       $variables['image_default'] = TRUE;
     }
   }
@@ -95,12 +125,12 @@ function ovpred_sub_articles_preprocess_node(&$variables) {
  * Implements hook_feeds_after_save().
  */
 function ovpred_sub_articles_feeds_after_save(FeedsSource $source, $entity, $item, $entity_id) {
-  if ($source->id == ('iowa_now_article_research' || 'iowa_now_articles_ed')) {
-    if(!empty($entity->field_article_image)) {
+  if ($source->id == ('ovpred_subsite_articles_iowanow')) {
+    if(!empty($entity->field_ovpred_sub_article_image)) {
       // Load the file.
-      $file = file_load($entity->field_article_image[LANGUAGE_NONE][0]['fid']);
+      $file = file_load($entity->field_ovpred_sub_article_image[LANGUAGE_NONE][0]['fid']);
       // Save provided alt text to the field on the file entity.
-      $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] = $entity->field_article_image[LANGUAGE_NONE][0]['alt'];
+      $file->field_file_image_alt_text[LANGUAGE_NONE][0]['value'] = $entity->field_ovpred_sub_article_image[LANGUAGE_NONE][0]['alt'];
       file_save($file);
     }
   }
