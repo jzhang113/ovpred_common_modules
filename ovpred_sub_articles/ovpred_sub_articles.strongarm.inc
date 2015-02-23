@@ -16,14 +16,11 @@ function ovpred_sub_articles_strongarm() {
   $strongarm->name = 'field_bundle_settings_node__ovpred_sub_article';
   $strongarm->value = array(
     'view_modes' => array(
-      'ovpred_sub_article_teaser' => array(
-        'custom_settings' => TRUE,
-      ),
       'ovpred_sub_article_list' => array(
         'custom_settings' => TRUE,
       ),
       'teaser' => array(
-        'custom_settings' => FALSE,
+        'custom_settings' => TRUE,
       ),
       'testimonial' => array(
         'custom_settings' => FALSE,

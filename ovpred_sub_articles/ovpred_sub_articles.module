@@ -10,39 +10,10 @@ include_once 'ovpred_sub_articles.features.inc';
  * Implements hook_entity_info_alter().
  */
 function ovpred_sub_articles_entity_info_alter(&$entity_info) {
-  $entity_info['file']['view modes']['ovpred_sub_article_teaser'] = array(
-    'label' => t('OVPRED Article Teaser'),
-    'custom settings' => TRUE,
-  );
   $entity_info['node']['view modes']['ovpred_sub_article_list'] = array(
     'label' => t('OVPRED Article List'),
     'custom settings' => TRUE,
   );
-  $entity_info['node']['view modes']['ovpred_sub_article_teaser'] = array(
-    'label' => t('OVPRED Article Teaser'),
-    'custom settings' => TRUE,
-  );
-}
-
-
-/**
- * Implements hook_node_view_alter().
- */
-function ovpred_sub_articles_node_view_alter(&$build) {
-  if ($build['#view_mode'] == 'ovpred_sub_article_teaser') {
-    $node=$build['#node'];
-    $links=array();
-
-    $node_title_stripped = strip_tags($node->title);
-    $links['node-readmore'] = array(
-      'title' => t('Read more<span class="element-invisible"> about @title</span>', array('@title' => $node_title_stripped)),
-      'href' => 'node/' . $node->nid,
-      'html' => TRUE,
-      'attributes' => array('rel' => 'tag', 'title' => $node_title_stripped),
-    );
-    // Assign links
-    $build['links']['node']['#links']=$links;
-  }
 }
 
 /**
