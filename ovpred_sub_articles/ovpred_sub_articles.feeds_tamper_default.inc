@@ -25,6 +25,22 @@ function ovpred_sub_articles_feeds_tamper_default() {
   $feeds_tamper = new stdClass();
   $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
   $feeds_tamper->api_version = 2;
+  $feeds_tamper->id = 'ovpred_subsite_articles_iowanow-xpathparser_10-explode';
+  $feeds_tamper->importer = 'ovpred_subsite_articles_iowanow';
+  $feeds_tamper->source = 'xpathparser:10';
+  $feeds_tamper->plugin_id = 'explode';
+  $feeds_tamper->settings = array(
+    'separator' => ',%s',
+    'limit' => '',
+    'real_separator' => ', ',
+  );
+  $feeds_tamper->weight = 0;
+  $feeds_tamper->description = 'Explode';
+  $export['ovpred_subsite_articles_iowanow-xpathparser_10-explode'] = $feeds_tamper;
+
+  $feeds_tamper = new stdClass();
+  $feeds_tamper->disabled = FALSE; /* Edit this to true to make a default feeds_tamper disabled initially */
+  $feeds_tamper->api_version = 2;
   $feeds_tamper->id = 'ovpred_subsite_articles_iowanow-xpathparser_3-timetodate';
   $feeds_tamper->importer = 'ovpred_subsite_articles_iowanow';
   $feeds_tamper->source = 'xpathparser:3';

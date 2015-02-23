@@ -136,7 +136,8 @@ function ovpred_sub_articles_feeds_importer_default() {
           10 => array(
             'source' => 'xpathparser:10',
             'target' => 'field_ovpred_sub_article_tags',
-            'unique' => FALSE,
+            'term_search' => '0',
+            'autocreate' => 1,
           ),
         ),
         'update_existing' => '2',

@@ -28,6 +28,7 @@ features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[feeds_importer][] = ovpred_subsite_articles_iowanow
 features[feeds_tamper][] = ovpred_subsite_articles_iowanow-xpathparser_1-html_entity_decode
+features[feeds_tamper][] = ovpred_subsite_articles_iowanow-xpathparser_10-explode
 features[feeds_tamper][] = ovpred_subsite_articles_iowanow-xpathparser_3-timetodate
 features[feeds_tamper][] = ovpred_subsite_articles_iowanow-xpathparser_8-find_replace_regex
 features[feeds_tamper][] = ovpred_subsite_articles_iowanow-xpathparser_9-find_replace
