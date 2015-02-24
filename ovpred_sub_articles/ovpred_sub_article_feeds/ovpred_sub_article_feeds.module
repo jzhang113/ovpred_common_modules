@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the OVPRED SubSite Article Feeds feature.
+ */
+
+include_once 'ovpred_sub_article_feeds.features.inc';
