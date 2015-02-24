@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.feeds_tamper_default.inc
+ * ovpred_sub_article_feeds.feeds_tamper_default.inc
  */
 
 /**
  * Implements hook_feeds_tamper_default().
  */
-function ovpred_sub_articles_feeds_tamper_default() {
+function ovpred_sub_article_feeds_feeds_tamper_default() {
   $export = array();
 
   $feeds_tamper = new stdClass();

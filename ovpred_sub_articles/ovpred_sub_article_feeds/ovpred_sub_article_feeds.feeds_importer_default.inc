@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.feeds_importer_default.inc
+ * ovpred_sub_article_feeds.feeds_importer_default.inc
  */
 
 /**
  * Implements hook_feeds_importer_default().
  */
-function ovpred_sub_articles_feeds_importer_default() {
+function ovpred_sub_article_feeds_feeds_importer_default() {
   $export = array();
 
   $feeds_importer = new stdClass();
