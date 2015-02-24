@@ -21,3 +21,6 @@ Provides one feed importer for articles from IowaNow.
 ## Notes
 * The Article feature may be overridden if you have view modes in your site that
  have not had OVPRED Article content type excluded.
+* There may be a namespace collision with the label for an older news content
+type. You will need to rename you older content type and should also remove
+permissions to create that content type.
