@@ -13,6 +13,27 @@ function ovpred_impact_data_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_node_ovpred_impact_data';
+  $strongarm->value = '1';
+  $export['auto_entitylabel_node_ovpred_impact_data'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_pattern_node_ovpred_impact_data';
+  $strongarm->value = '[node:field_ovpred_id_data] [node:field_ovpred_id_caption]';
+  $export['auto_entitylabel_pattern_node_ovpred_impact_data'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'auto_entitylabel_php_node_ovpred_impact_data';
+  $strongarm->value = 0;
+  $export['auto_entitylabel_php_node_ovpred_impact_data'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'field_bundle_settings_node__ovpred_impact_data';
   $strongarm->value = array(
     'view_modes' => array(
