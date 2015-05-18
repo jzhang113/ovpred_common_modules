@@ -3,6 +3,7 @@ core = 7.x
 package = OVPRED
 version = 7.x-1.0
 project = ovpred_sub_articles
+hidden = TRUE
 dependencies[] = ctools
 dependencies[] = entity_view_mode
 dependencies[] = features
