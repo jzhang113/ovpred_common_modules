@@ -68,7 +68,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_ext_url'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_ext_url'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ext_url'] = array(
     'bundle' => 'ovpred_sub_article',
     'default_value' => NULL,
@@ -136,7 +137,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_ian_url'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_ian_url'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ian_url'] = array(
     'bundle' => 'ovpred_sub_article',
     'default_value' => NULL,
@@ -204,7 +206,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_image'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_image'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_image'] = array(
     'bundle' => 'ovpred_sub_article',
     'deleted' => 0,
@@ -297,7 +300,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'] = array(
     'bundle' => 'ovpred_sub_article',
     'deleted' => 0,
@@ -392,7 +396,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_source'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_source'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_source'] = array(
     'bundle' => 'ovpred_sub_article',
     'default_value' => NULL,
@@ -443,7 +448,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_tags'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_tags'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_tags'] = array(
     'bundle' => 'ovpred_sub_article',
     'default_value' => NULL,
@@ -495,7 +501,8 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-ovpred_sub_article-field_ovpred_sub_article_type'
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_type'
   $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_type'] = array(
     'bundle' => 'ovpred_sub_article',
     'default_value' => array(

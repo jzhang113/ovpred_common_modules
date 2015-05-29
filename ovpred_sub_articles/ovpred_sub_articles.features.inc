@@ -24,16 +24,9 @@ function ovpred_sub_articles_image_default_styles() {
 
   // Exported image style: ovpred_sub_article_teaser.
   $styles['ovpred_sub_article_teaser'] = array(
-    'name' => 'ovpred_sub_article_teaser',
     'label' => 'OVPRED Subsite Article Teaser',
     'effects' => array(
       1 => array(
-        'label' => 'Manual Crop: Crop and scale',
-        'help' => 'Crop and scale a user-selected area, respecting the ratio of the destination width and height.',
-        'effect callback' => 'manualcrop_crop_and_scale_effect',
-        'form callback' => 'manualcrop_crop_and_scale_form',
-        'summary theme' => 'manualcrop_crop_and_scale_summary',
-        'module' => 'manualcrop',
         'name' => 'manualcrop_crop_and_scale',
         'data' => array(
           'width' => 300,
