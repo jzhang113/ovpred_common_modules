@@ -175,7 +175,9 @@ function ovpred_sub_article_views_views_default_views() {
     4 => 0,
     5 => 0,
   );
+  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['vocabulary'] = 'ovpred_sub_article_tags';
+  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['hierarchy'] = 1;
   $handler->display->display_options['pane_title'] = 'OVPRED Articles - Teaser';
   $handler->display->display_options['pane_category']['name'] = 'OVPRED Articles';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -269,7 +271,9 @@ function ovpred_sub_article_views_views_default_views() {
     4 => 0,
     5 => 0,
   );
+  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['type'] = 'select';
   $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['vocabulary'] = 'ovpred_sub_article_tags';
+  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['hierarchy'] = 1;
   $handler->display->display_options['pane_title'] = 'OVPRED Articles - List';
   $handler->display->display_options['pane_category']['name'] = 'OVPRED Articles';
   $handler->display->display_options['pane_category']['weight'] = '0';
