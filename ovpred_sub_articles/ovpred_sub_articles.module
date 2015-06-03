@@ -66,8 +66,8 @@ function ovpred_sub_articles_preprocess_node(&$variables) {
       }
     }
 
-    if(!empty($variables['field_ovpred_sub_article_external_url'])) {
-      $external = $variables['field_ovpred_sub_article_external_url'][LANGUAGE_NONE][0]['url'];
+    if(!empty($variables['field_ovpred_sub_article_ext_url'])) {
+      $external = $variables['field_ovpred_sub_article_ext_url'][LANGUAGE_NONE][0]['url'];
       $variables['node_url'] = $external;
       if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
         $variables['content']['links']['node']['#links']['node-readmore']['href'] = $external;
