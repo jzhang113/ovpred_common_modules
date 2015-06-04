@@ -22,7 +22,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 1,
       ),
       'ovpred_sub_article_list' => array(
         'label' => 'above',
@@ -64,7 +64,110 @@ function ovpred_sub_articles_field_default_field_instances() {
         'summary_rows' => 5,
       ),
       'type' => 'text_textarea_with_summary',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_by_line'
+  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_by_line'] = array(
+    'bundle' => 'ovpred_sub_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Provide a by line for this article. "By " is provided for you.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'ovpred_sub_article_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ovpred_sub_article_by_line',
+    'label' => 'By Line',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
       'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-ovpred_sub_article-field_ovpred_sub_article_contact'
+  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_contact'] = array(
+    'bundle' => 'ovpred_sub_article',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'entityreference',
+        'settings' => array(
+          'links' => 0,
+          'view_mode' => 'teaser',
+        ),
+        'type' => 'entityreference_entity_view',
+        'weight' => 2,
+      ),
+      'ovpred_sub_article_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ovpred_sub_article_contact',
+    'label' => 'Contacts',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'inline_entity_form',
+      'settings' => array(
+        'fields' => array(),
+        'type_settings' => array(
+          'allow_existing' => 1,
+          'delete_references' => 0,
+          'label_plural' => 'contacts',
+          'label_singular' => 'contact',
+          'match_operator' => 'CONTAINS',
+          'override_labels' => 1,
+        ),
+      ),
+      'type' => 'inline_entity_form',
+      'weight' => 9,
     ),
   );
 
@@ -296,7 +399,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -392,7 +495,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'manualcrop_thumblist' => 0,
       ),
       'type' => 'media_generic',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -408,7 +511,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 3,
+        'weight' => 4,
       ),
       'ovpred_sub_article_list' => array(
         'label' => 'above',
@@ -461,7 +564,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 9,
+        'weight' => 3,
       ),
       'ovpred_sub_article_list' => array(
         'label' => 'above',
@@ -497,7 +600,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 8,
+      'weight' => 10,
     ),
   );
 
@@ -517,7 +620,7 @@ function ovpred_sub_articles_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 10,
+        'weight' => 9,
       ),
       'ovpred_sub_article_list' => array(
         'label' => 'above',
@@ -554,16 +657,161 @@ function ovpred_sub_articles_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance:
+  // 'node-ovpred_sub_article_contact-field_ovpred_ac_department_title'
+  $field_instances['node-ovpred_sub_article_contact-field_ovpred_ac_department_title'] = array(
+    'bundle' => 'ovpred_sub_article_contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'ovpred_sub_article_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ovpred_ac_department_title',
+    'label' => 'Department/Title',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-ovpred_sub_article_contact-field_ovpred_ac_email'
+  $field_instances['node-ovpred_sub_article_contact-field_ovpred_ac_email'] = array(
+    'bundle' => 'ovpred_sub_article_contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'email',
+        'settings' => array(),
+        'type' => 'email_default',
+        'weight' => 1,
+      ),
+      'ovpred_sub_article_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ovpred_ac_email',
+    'label' => 'Email',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'email',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'email_textfield',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance:
+  // 'node-ovpred_sub_article_contact-field_ovpred_ac_telephone'
+  $field_instances['node-ovpred_sub_article_contact-field_ovpred_ac_telephone'] = array(
+    'bundle' => 'ovpred_sub_article_contact',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_plain',
+        'weight' => 2,
+      ),
+      'ovpred_sub_article_list' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_ovpred_ac_telephone',
+    'label' => 'Telephone',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'telephone',
+      'settings' => array(
+        'placeholder' => '',
+      ),
+      'type' => 'telephone_default',
+      'weight' => 2,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('By Line');
+  t('Contacts');
+  t('Department/Title');
+  t('Email');
   t('Enter any associated tags.');
   t('External URL');
   t('Image');
   t('Image Override');
   t('IowaNow URL');
+  t('Provide a by line for this article. "By " is provided for you.');
   t('Publication Source');
   t('Tags');
+  t('Telephone');
   t('The URL to the Iowa Now article on now.uiowa.edu.');
   t('The URL to the article, on an external website.');
   t('The publication source is the news service, blog or other publication name. E.x. NPR or Daily Iowan.');

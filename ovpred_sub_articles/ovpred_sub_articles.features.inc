@@ -57,6 +57,14 @@ function ovpred_sub_articles_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
+    'ovpred_sub_article_contact' => array(
+      'name' => t('Article Contact'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
   );
   drupal_alter('node_info', $items);
   return $items;
