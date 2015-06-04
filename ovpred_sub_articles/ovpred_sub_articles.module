@@ -85,6 +85,10 @@ function ovpred_sub_articles_preprocess_node(&$variables) {
     if(!empty($variables['field_ovpred_sub_article_image'])) {
       $variables['image_default'] = TRUE;
     }
+
+    if(!empty($variables['field_ovpred_sub_article_by_line'])) {
+      $variables['by_line'] = $variables['field_ovpred_sub_article_by_line'][LANGUAGE_NONE][0]['safe_value'];
+    }
   }
 }
 
