@@ -86,6 +86,8 @@ function ovpred_sub_articles_preprocess_node(&$variables) {
       $variables['image_default'] = TRUE;
     }
 
+    $variables['by_line'] = '';
+
     if(!empty($variables['field_ovpred_sub_article_by_line'])) {
       $variables['by_line'] = $variables['field_ovpred_sub_article_by_line'][LANGUAGE_NONE][0]['safe_value'];
     }
