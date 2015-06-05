@@ -6,7 +6,6 @@ project = ovpred_superfish
 dependencies[] = ctools
 dependencies[] = strongarm
 dependencies[] = superfish
-hidden = TRUE
 features[ctools][] = strongarm:strongarm:1
 features[features_api][] = api:2
 features[variable][] = superfish_amw_1

@@ -3,7 +3,6 @@ core = 7.x
 package = OVPRED
 version = 7.x-1.0
 project = ovpred_image_slideshow
-hidden = TRUE
 dependencies[] = ctools
 dependencies[] = entityqueue
 dependencies[] = entityreference

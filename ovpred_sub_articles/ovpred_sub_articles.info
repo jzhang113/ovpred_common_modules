@@ -3,7 +3,6 @@ core = 7.x
 package = OVPRED
 version = 7.x-1.0
 project = ovpred_sub_articles
-hidden = TRUE
 dependencies[] = cbb_common
 dependencies[] = ctools
 dependencies[] = email
