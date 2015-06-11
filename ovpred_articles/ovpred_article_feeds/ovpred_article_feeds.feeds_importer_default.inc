@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * ovpred_sub_article_feeds.feeds_importer_default.inc
+ * ovpred_article_feeds.feeds_importer_default.inc
  */
 
 /**
  * Implements hook_feeds_importer_default().
  */
-function ovpred_sub_article_feeds_feeds_importer_default() {
+function ovpred_article_feeds_feeds_importer_default() {
   $export = array();
 
   $feeds_importer = new stdClass();
   $feeds_importer->disabled = FALSE; /* Edit this to true to make a default feeds_importer disabled initially */
   $feeds_importer->api_version = 1;
-  $feeds_importer->id = 'ovpred_subsite_articles_iowanow';
+  $feeds_importer->id = 'ovpred_articles_iowanow';
   $feeds_importer->config = array(
-    'name' => 'OVPRED SubSite Articles - IowaNow',
+    'name' => 'OVPRED Articles - IowaNow',
     'description' => '',
     'fetcher' => array(
       'plugin_key' => 'FeedsHTTPFetcher',
@@ -105,37 +105,37 @@ function ovpred_sub_article_feeds_feeds_importer_default() {
           ),
           4 => array(
             'source' => 'xpathparser:4',
-            'target' => 'field_ovpred_sub_article_ian_url:url',
+            'target' => 'field_ovpred_article_ian_url:url',
             'unique' => FALSE,
           ),
           5 => array(
             'source' => 'xpathparser:5',
-            'target' => 'field_ovpred_sub_article_ext_url:url',
+            'target' => 'field_ovpred_article_ext_url:url',
             'unique' => FALSE,
           ),
           6 => array(
             'source' => 'xpathparser:6',
-            'target' => 'field_ovpred_sub_article_source',
+            'target' => 'field_ovpred_article_source',
             'unique' => FALSE,
           ),
           7 => array(
             'source' => 'xpathparser:7',
-            'target' => 'field_ovpred_sub_article_image:alt',
+            'target' => 'field_ovpred_article_image:alt',
             'unique' => FALSE,
           ),
           8 => array(
             'source' => 'xpathparser:8',
-            'target' => 'field_ovpred_sub_article_image:uri',
+            'target' => 'field_ovpred_article_image:uri',
             'unique' => FALSE,
           ),
           9 => array(
             'source' => 'xpathparser:9',
-            'target' => 'field_ovpred_sub_article_type',
+            'target' => 'field_ovpred_article_type',
             'unique' => FALSE,
           ),
           10 => array(
             'source' => 'xpathparser:10',
-            'target' => 'field_ovpred_sub_article_tags',
+            'target' => 'field_ovpred_article_tags',
             'term_search' => '0',
             'autocreate' => 1,
           ),
@@ -143,7 +143,7 @@ function ovpred_sub_article_feeds_feeds_importer_default() {
         'update_existing' => '2',
         'input_format' => 'filtered_html',
         'skip_hash_check' => 0,
-        'bundle' => 'ovpred_sub_article',
+        'bundle' => 'ovpred_article',
       ),
     ),
     'content_type' => '',
@@ -153,7 +153,7 @@ function ovpred_sub_article_feeds_feeds_importer_default() {
     'import_on_create' => 1,
     'process_in_background' => 0,
   );
-  $export['ovpred_subsite_articles_iowanow'] = $feeds_importer;
+  $export['ovpred_articles_iowanow'] = $feeds_importer;
 
   return $export;
 }
