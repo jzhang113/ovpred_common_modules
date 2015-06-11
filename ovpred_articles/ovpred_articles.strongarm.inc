@@ -16,7 +16,7 @@ function ovpred_articles_strongarm() {
   $strongarm->name = 'field_bundle_settings_node__ovpred_article';
   $strongarm->value = array(
     'view_modes' => array(
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'custom_settings' => TRUE,
       ),
       'teaser' => array(
@@ -70,7 +70,7 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'field_bundle_settings_node__ovpred_sub_article_contact';
+  $strongarm->name = 'field_bundle_settings_node__ovpred_article_contact';
   $strongarm->value = array(
     'view_modes' => array(),
     'extra_fields' => array(
@@ -88,7 +88,7 @@ function ovpred_articles_strongarm() {
       'display' => array(),
     ),
   );
-  $export['field_bundle_settings_node__ovpred_sub_article_contact'] = $strongarm;
+  $export['field_bundle_settings_node__ovpred_article_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -102,9 +102,9 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_options_ovpred_sub_article_contact';
+  $strongarm->name = 'menu_options_ovpred_article_contact';
   $strongarm->value = array();
-  $export['menu_options_ovpred_sub_article_contact'] = $strongarm;
+  $export['menu_options_ovpred_article_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -116,9 +116,9 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'menu_parent_ovpred_sub_article_contact';
+  $strongarm->name = 'menu_parent_ovpred_article_contact';
   $strongarm->value = 'main-menu:0';
-  $export['menu_parent_ovpred_sub_article_contact'] = $strongarm;
+  $export['menu_parent_ovpred_article_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -133,12 +133,12 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_options_ovpred_sub_article_contact';
+  $strongarm->name = 'node_options_ovpred_article_contact';
   $strongarm->value = array(
     0 => 'status',
     1 => 'revision',
   );
-  $export['node_options_ovpred_sub_article_contact'] = $strongarm;
+  $export['node_options_ovpred_article_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -150,9 +150,9 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_preview_ovpred_sub_article_contact';
+  $strongarm->name = 'node_preview_ovpred_article_contact';
   $strongarm->value = '1';
-  $export['node_preview_ovpred_sub_article_contact'] = $strongarm;
+  $export['node_preview_ovpred_article_contact'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -164,9 +164,9 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
-  $strongarm->name = 'node_submitted_ovpred_sub_article_contact';
+  $strongarm->name = 'node_submitted_ovpred_article_contact';
   $strongarm->value = 0;
-  $export['node_submitted_ovpred_sub_article_contact'] = $strongarm;
+  $export['node_submitted_ovpred_article_contact'] = $strongarm;
 
   return $export;
 }

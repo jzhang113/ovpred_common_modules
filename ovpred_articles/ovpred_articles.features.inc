@@ -22,8 +22,8 @@ function ovpred_articles_ctools_plugin_api($module = NULL, $api = NULL) {
 function ovpred_articles_image_default_styles() {
   $styles = array();
 
-  // Exported image style: ovpred_sub_article_teaser.
-  $styles['ovpred_sub_article_teaser'] = array(
+  // Exported image style: ovpred_article_teaser.
+  $styles['ovpred_article_teaser'] = array(
     'label' => 'OVPRED Subsite Article Teaser',
     'effects' => array(
       1 => array(
@@ -34,7 +34,7 @@ function ovpred_articles_image_default_styles() {
           'upscale' => 0,
           'respectminimum' => 1,
           'onlyscaleifcrop' => 0,
-          'style_name' => 'ovpred_sub_article_teaser',
+          'style_name' => 'ovpred_article_teaser',
         ),
         'weight' => 0,
       ),
@@ -57,7 +57,7 @@ function ovpred_articles_node_info() {
       'title_label' => t('Title'),
       'help' => '',
     ),
-    'ovpred_sub_article_contact' => array(
+    'ovpred_article_contact' => array(
       'name' => t('Article Contact'),
       'base' => 'node_content',
       'description' => '',

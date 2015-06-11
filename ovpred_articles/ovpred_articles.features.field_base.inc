@@ -61,13 +61,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'telephone',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_by_line'
-  $field_bases['field_ovpred_sub_article_by_line'] = array(
+  // Exported field_base: 'field_ovpred_article_by_line'
+  $field_bases['field_ovpred_article_by_line'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_by_line',
+    'field_name' => 'field_ovpred_article_by_line',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -82,13 +82,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_contact'
-  $field_bases['field_ovpred_sub_article_contact'] = array(
+  // Exported field_base: 'field_ovpred_article_contact'
+  $field_bases['field_ovpred_article_contact'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_contact',
+    'field_name' => 'field_ovpred_article_contact',
     'indexes' => array(
       'target_id' => array(
         0 => 'target_id',
@@ -120,13 +120,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'entityreference',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_ext_url'
-  $field_bases['field_ovpred_sub_article_ext_url'] = array(
+  // Exported field_base: 'field_ovpred_article_ext_url'
+  $field_bases['field_ovpred_article_ext_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_ext_url',
+    'field_name' => 'field_ovpred_article_ext_url',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -149,13 +149,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_ian_url'
-  $field_bases['field_ovpred_sub_article_ian_url'] = array(
+  // Exported field_base: 'field_ovpred_article_ian_url'
+  $field_bases['field_ovpred_article_ian_url'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_ian_url',
+    'field_name' => 'field_ovpred_article_ian_url',
     'indexes' => array(),
     'locked' => 0,
     'module' => 'link',
@@ -178,13 +178,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'link_field',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_image'
-  $field_bases['field_ovpred_sub_article_image'] = array(
+  // Exported field_base: 'field_ovpred_article_image'
+  $field_bases['field_ovpred_article_image'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_image',
+    'field_name' => 'field_ovpred_article_image',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -200,13 +200,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_img_ovr'
-  $field_bases['field_ovpred_sub_article_img_ovr'] = array(
+  // Exported field_base: 'field_ovpred_article_img_ovr'
+  $field_bases['field_ovpred_article_img_ovr'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_img_ovr',
+    'field_name' => 'field_ovpred_article_img_ovr',
     'indexes' => array(
       'fid' => array(
         0 => 'fid',
@@ -222,13 +222,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'image',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_source'
-  $field_bases['field_ovpred_sub_article_source'] = array(
+  // Exported field_base: 'field_ovpred_article_source'
+  $field_bases['field_ovpred_article_source'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_source',
+    'field_name' => 'field_ovpred_article_source',
     'indexes' => array(
       'format' => array(
         0 => 'format',
@@ -243,13 +243,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'text',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_tags'
-  $field_bases['field_ovpred_sub_article_tags'] = array(
+  // Exported field_base: 'field_ovpred_article_tags'
+  $field_bases['field_ovpred_article_tags'] = array(
     'active' => 1,
     'cardinality' => -1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_tags',
+    'field_name' => 'field_ovpred_article_tags',
     'indexes' => array(
       'tid' => array(
         0 => 'tid',
@@ -269,13 +269,13 @@ function ovpred_articles_field_default_field_bases() {
     'type' => 'taxonomy_term_reference',
   );
 
-  // Exported field_base: 'field_ovpred_sub_article_type'
-  $field_bases['field_ovpred_sub_article_type'] = array(
+  // Exported field_base: 'field_ovpred_article_type'
+  $field_bases['field_ovpred_article_type'] = array(
     'active' => 1,
     'cardinality' => 1,
     'deleted' => 0,
     'entity_types' => array(),
-    'field_name' => 'field_ovpred_sub_article_type',
+    'field_name' => 'field_ovpred_article_type',
     'indexes' => array(
       'value' => array(
         0 => 'value',

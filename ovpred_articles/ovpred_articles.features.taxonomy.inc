@@ -9,9 +9,9 @@
  */
 function ovpred_articles_taxonomy_default_vocabularies() {
   return array(
-    'ovpred_sub_article_tags' => array(
+    'ovpred_article_tags' => array(
       'name' => 'OVPRED Article Tags',
-      'machine_name' => 'ovpred_sub_article_tags',
+      'machine_name' => 'ovpred_article_tags',
       'description' => '',
       'hierarchy' => 0,
       'module' => 'taxonomy',

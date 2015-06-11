@@ -10,9 +10,9 @@
 function ovpred_articles_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-ovpred_sub_article-body'
-  $field_instances['node-ovpred_sub_article-body'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // Exported field_instance: 'node-ovpred_article-body'
+  $field_instances['node-ovpred_article-body'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -24,13 +24,13 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 1,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'hidden',
         'module' => 'text',
         'settings' => array(
@@ -69,9 +69,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_by_line'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_by_line'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_by_line'
+  $field_instances['node-ovpred_article-field_ovpred_article_by_line'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Provide a by line for this article. "By " is provided for you.',
@@ -82,7 +82,7 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -96,7 +96,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_by_line',
+    'field_name' => 'field_ovpred_article_by_line',
     'label' => 'By Line',
     'required' => 0,
     'settings' => array(
@@ -115,9 +115,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_contact'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_contact'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_contact'
+  $field_instances['node-ovpred_article-field_ovpred_article_contact'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -132,7 +132,7 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'entityreference_entity_view',
         'weight' => 2,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -146,7 +146,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_contact',
+    'field_name' => 'field_ovpred_article_contact',
     'label' => 'Contacts',
     'required' => 0,
     'settings' => array(
@@ -172,9 +172,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_ext_url'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ext_url'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_ext_url'
+  $field_instances['node-ovpred_article-field_ovpred_article_ext_url'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'The URL to the article, on an external website.',
@@ -185,13 +185,13 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -205,7 +205,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_ext_url',
+    'field_name' => 'field_ovpred_article_ext_url',
     'label' => 'External URL',
     'required' => 0,
     'settings' => array(
@@ -241,9 +241,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_ian_url'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_ian_url'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_ian_url'
+  $field_instances['node-ovpred_article-field_ovpred_article_ian_url'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'The URL to the Iowa Now article on now.uiowa.edu.',
@@ -254,13 +254,13 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 8,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -274,7 +274,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_ian_url',
+    'field_name' => 'field_ovpred_article_ian_url',
     'label' => 'IowaNow URL',
     'required' => 0,
     'settings' => array(
@@ -310,9 +310,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_image'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_image'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_image'
+  $field_instances['node-ovpred_article-field_ovpred_article_image'] = array(
+    'bundle' => 'ovpred_article',
     'deleted' => 0,
     'description' => 'Upload an image to support this content.',
     'display' => array(
@@ -322,17 +322,17 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 6,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
-          'file_view_mode' => 'ovpred_sub_article_teaser',
+          'file_view_mode' => 'ovpred_article_teaser',
         ),
         'type' => 'file_rendered',
         'weight' => 1,
@@ -348,13 +348,13 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_image',
+    'field_name' => 'field_ovpred_article_image',
     'label' => 'Image',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => 'images/ovpred_sub_article',
+      'file_directory' => 'images/ovpred_article',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '4 MB',
       'max_resolution' => '1500x1500',
@@ -393,7 +393,7 @@ function ovpred_articles_field_default_field_instances() {
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(),
         'manualcrop_styles_list' => array(
-          'ovpred_sub_article_teaser' => 'ovpred_sub_article_teaser',
+          'ovpred_article_teaser' => 'ovpred_article_teaser',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -404,9 +404,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_img_ovr'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_img_ovr'
+  $field_instances['node-ovpred_article-field_ovpred_article_img_ovr'] = array(
+    'bundle' => 'ovpred_article',
     'deleted' => 0,
     'description' => 'Upload an image to support this content and override the one provided by Iowa Now.',
     'display' => array(
@@ -416,17 +416,17 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 7,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'hidden',
         'module' => 'file_entity',
         'settings' => array(
-          'file_view_mode' => 'ovpred_sub_article_teaser',
+          'file_view_mode' => 'ovpred_article_teaser',
         ),
         'type' => 'file_rendered',
         'weight' => 0,
@@ -442,13 +442,13 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_img_ovr',
+    'field_name' => 'field_ovpred_article_img_ovr',
     'label' => 'Image Override',
     'required' => 0,
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
-      'file_directory' => 'images/ovpred_sub_article_override',
+      'file_directory' => 'images/ovpred_article_override',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '4 MB',
       'max_resolution' => '1500x1500',
@@ -486,10 +486,10 @@ function ovpred_articles_field_default_field_instances() {
         'manualcrop_keyboard' => 1,
         'manualcrop_maximize_default_crop_area' => 0,
         'manualcrop_require_cropping' => array(
-          'ovpred_sub_article_teaser' => 'ovpred_sub_article_teaser',
+          'ovpred_article_teaser' => 'ovpred_article_teaser',
         ),
         'manualcrop_styles_list' => array(
-          'ovpred_sub_article_teaser' => 'ovpred_sub_article_teaser',
+          'ovpred_article_teaser' => 'ovpred_article_teaser',
         ),
         'manualcrop_styles_mode' => 'include',
         'manualcrop_thumblist' => 0,
@@ -500,9 +500,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_source'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_source'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_source'
+  $field_instances['node-ovpred_article-field_ovpred_article_source'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'The publication source is the news service, blog or other publication name. E.x. NPR or Daily Iowan.',
@@ -513,13 +513,13 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 4,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -533,7 +533,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_source',
+    'field_name' => 'field_ovpred_article_source',
     'label' => 'Publication Source',
     'required' => 0,
     'settings' => array(
@@ -552,9 +552,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_tags'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_tags'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_tags'
+  $field_instances['node-ovpred_article-field_ovpred_article_tags'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => 'Enter any associated tags.',
@@ -566,13 +566,13 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'taxonomy_term_reference_link',
         'weight' => 3,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -586,7 +586,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_tags',
+    'field_name' => 'field_ovpred_article_tags',
     'label' => 'Tags',
     'required' => 0,
     'settings' => array(
@@ -605,9 +605,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article-field_ovpred_sub_article_type'
-  $field_instances['node-ovpred_sub_article-field_ovpred_sub_article_type'] = array(
-    'bundle' => 'ovpred_sub_article',
+  // 'node-ovpred_article-field_ovpred_article_type'
+  $field_instances['node-ovpred_article-field_ovpred_article_type'] = array(
+    'bundle' => 'ovpred_article',
     'default_value' => array(
       0 => array(
         'value' => 'local',
@@ -622,13 +622,13 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 9,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
         'weight' => 0,
       ),
-      'ovpred_sub_article_teaser' => array(
+      'ovpred_article_teaser' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -642,7 +642,7 @@ function ovpred_articles_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_ovpred_sub_article_type',
+    'field_name' => 'field_ovpred_article_type',
     'label' => 'Type',
     'required' => 1,
     'settings' => array(
@@ -658,9 +658,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article_contact-field_ovpred_ac_department_title'
-  $field_instances['node-ovpred_sub_article_contact-field_ovpred_ac_department_title'] = array(
-    'bundle' => 'ovpred_sub_article_contact',
+  // 'node-ovpred_article_contact-field_ovpred_ac_department_title'
+  $field_instances['node-ovpred_article_contact-field_ovpred_ac_department_title'] = array(
+    'bundle' => 'ovpred_article_contact',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -672,7 +672,7 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'text_default',
         'weight' => 3,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -705,9 +705,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article_contact-field_ovpred_ac_email'
-  $field_instances['node-ovpred_sub_article_contact-field_ovpred_ac_email'] = array(
-    'bundle' => 'ovpred_sub_article_contact',
+  // 'node-ovpred_article_contact-field_ovpred_ac_email'
+  $field_instances['node-ovpred_article_contact-field_ovpred_ac_email'] = array(
+    'bundle' => 'ovpred_article_contact',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -719,7 +719,7 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'email_default',
         'weight' => 1,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
@@ -751,9 +751,9 @@ function ovpred_articles_field_default_field_instances() {
   );
 
   // Exported field_instance:
-  // 'node-ovpred_sub_article_contact-field_ovpred_ac_telephone'
-  $field_instances['node-ovpred_sub_article_contact-field_ovpred_ac_telephone'] = array(
-    'bundle' => 'ovpred_sub_article_contact',
+  // 'node-ovpred_article_contact-field_ovpred_ac_telephone'
+  $field_instances['node-ovpred_article_contact-field_ovpred_ac_telephone'] = array(
+    'bundle' => 'ovpred_article_contact',
     'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
@@ -765,7 +765,7 @@ function ovpred_articles_field_default_field_instances() {
         'type' => 'text_plain',
         'weight' => 2,
       ),
-      'ovpred_sub_article_list' => array(
+      'ovpred_article_list' => array(
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
