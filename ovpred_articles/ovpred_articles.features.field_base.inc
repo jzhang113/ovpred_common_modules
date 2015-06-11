@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.features.field_base.inc
+ * ovpred_articles.features.field_base.inc
  */
 
 /**
  * Implements hook_field_default_field_bases().
  */
-function ovpred_sub_articles_field_default_field_bases() {
+function ovpred_articles_field_default_field_bases() {
   $field_bases = array();
 
   // Exported field_base: 'field_ovpred_ac_department_title'

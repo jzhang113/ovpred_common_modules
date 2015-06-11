@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.features.field_instance.inc
+ * ovpred_articles.features.field_instance.inc
  */
 
 /**
  * Implements hook_field_default_field_instances().
  */
-function ovpred_sub_articles_field_default_field_instances() {
+function ovpred_articles_field_default_field_instances() {
   $field_instances = array();
 
   // Exported field_instance: 'node-ovpred_sub_article-body'

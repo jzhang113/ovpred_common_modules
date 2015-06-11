@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.strongarm.inc
+ * ovpred_articles.strongarm.inc
  */
 
 /**
  * Implements hook_strongarm().
  */
-function ovpred_sub_articles_strongarm() {
+function ovpred_articles_strongarm() {
   $export = array();
 
   $strongarm = new stdClass();

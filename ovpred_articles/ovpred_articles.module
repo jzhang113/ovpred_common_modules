@@ -1,15 +1,15 @@
 <?php
 /**
  * @file
- * Code for the OVPRED Subsite Articles feature.
+ * Code for the OVPRED Articles feature.
  */
 
-include_once 'ovpred_sub_articles.features.inc';
+include_once 'ovpred_articles.features.inc';
 
 /**
  * Implements hook_entity_info_alter().
  */
-function ovpred_sub_articles_entity_info_alter(&$entity_info) {
+function ovpred_articles_entity_info_alter(&$entity_info) {
   $entity_info['node']['view modes']['ovpred_sub_article_list'] = array(
     'label' => t('OVPRED Article List'),
     'custom settings' => TRUE,
@@ -19,7 +19,7 @@ function ovpred_sub_articles_entity_info_alter(&$entity_info) {
 /**
  * Implements hook_form_FORM_ID_alter.
  */
-function ovpred_sub_articles_form_ovpred_sub_article_node_form_alter(&$form, &$form_state, $form_id) {
+function ovpred_articles_form_ovpred_sub_article_node_form_alter(&$form, &$form_state, $form_id) {
 
   // Add states relating to the type of OVPRED Sub Article.
   $form['field_ovpred_sub_article_ian_url']['#states'] = array(
@@ -50,7 +50,7 @@ function ovpred_sub_articles_form_ovpred_sub_article_node_form_alter(&$form, &$f
 /**
  * Implements hook_preprocess_node().
  */
-function ovpred_sub_articles_preprocess_node(&$variables) {
+function ovpred_articles_preprocess_node(&$variables) {
   if($variables['type'] == 'ovpred_sub_article') {
     // Create a new theme hook suggestion for node--ovpred_sub_article--iowanow.tpl.php
     // to be used instead of node--article.tpl.php
@@ -97,7 +97,7 @@ function ovpred_sub_articles_preprocess_node(&$variables) {
 /**
  * Implements hook_feeds_after_save().
  */
-function ovpred_sub_articles_feeds_after_save(FeedsSource $source, $entity, $item, $entity_id) {
+function ovpred_articles_feeds_after_save(FeedsSource $source, $entity, $item, $entity_id) {
   if ($source->id == ('ovpred_subsite_articles_iowanow')) {
     if(!empty($entity->field_ovpred_sub_article_image)) {
       // Load the file.

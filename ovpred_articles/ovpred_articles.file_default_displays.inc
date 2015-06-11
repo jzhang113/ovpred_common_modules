@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.file_default_displays.inc
+ * ovpred_articles.file_default_displays.inc
  */
 
 /**
  * Implements hook_file_default_displays().
  */
-function ovpred_sub_articles_file_default_displays() {
+function ovpred_articles_file_default_displays() {
   $export = array();
 
   $file_display = new stdClass();

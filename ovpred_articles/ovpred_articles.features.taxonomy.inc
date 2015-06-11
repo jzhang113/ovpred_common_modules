@@ -1,13 +1,13 @@
 <?php
 /**
  * @file
- * ovpred_sub_articles.features.taxonomy.inc
+ * ovpred_articles.features.taxonomy.inc
  */
 
 /**
  * Implements hook_taxonomy_default_vocabularies().
  */
-function ovpred_sub_articles_taxonomy_default_vocabularies() {
+function ovpred_articles_taxonomy_default_vocabularies() {
   return array(
     'ovpred_sub_article_tags' => array(
       'name' => 'OVPRED Article Tags',
