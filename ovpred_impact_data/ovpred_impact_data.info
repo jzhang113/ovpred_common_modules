@@ -4,7 +4,6 @@ core = 7.x
 package = OVPRED
 version = 7.x-1.0
 project = ovpred_impact_data
-hidden = TRUE
 dependencies[] = auto_entitylabel
 dependencies[] = ctools
 dependencies[] = entityqueue
