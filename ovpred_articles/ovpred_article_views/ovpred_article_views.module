@@ -4,4 +4,4 @@
  * Code for the OVPRED Subsite Article Views feature.
  */
 
-include_once 'ovpred_sub_article_views.features.inc';
+include_once 'ovpred_article_views.features.inc';

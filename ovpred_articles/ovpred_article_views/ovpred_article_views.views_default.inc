@@ -1,21 +1,21 @@
 <?php
 /**
  * @file
- * ovpred_sub_article_views.views_default.inc
+ * ovpred_article_views.views_default.inc
  */
 
 /**
  * Implements hook_views_default_views().
  */
-function ovpred_sub_article_views_views_default_views() {
+function ovpred_article_views_views_default_views() {
   $export = array();
 
   $view = new view();
-  $view->name = 'ovpred_sub_articles';
+  $view->name = 'ovpred_articles';
   $view->description = '';
   $view->tag = 'default';
   $view->base_table = 'node';
-  $view->human_name = 'OVPRED Subsite Articles';
+  $view->human_name = 'OVPRED Articles (Shared)';
   $view->core = 7;
   $view->api_version = '3.0';
   $view->disabled = FALSE; /* Edit this to true to make a default view disabled initially */
@@ -56,7 +56,7 @@ function ovpred_sub_article_views_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'ovpred_sub_article' => 'ovpred_sub_article',
+    'ovpred_article' => 'ovpred_article',
   );
 
   /* Display: Page: Archive */
@@ -139,7 +139,7 @@ function ovpred_sub_article_views_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'ovpred_sub_article' => 'ovpred_sub_article',
+    'ovpred_article' => 'ovpred_article',
   );
   /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
@@ -158,26 +158,26 @@ function ovpred_sub_article_views_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Tags (field_ovpred_sub_article_tags) */
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['id'] = 'field_ovpred_sub_article_tags_tid';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['table'] = 'field_data_field_ovpred_sub_article_tags';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['field'] = 'field_ovpred_sub_article_tags_tid';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['operator_id'] = 'field_ovpred_sub_article_tags_tid_op';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['label'] = 'OVPRED Article Tags';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['operator'] = 'field_ovpred_sub_article_tags_tid_op';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['identifier'] = 'field_ovpred_sub_article_tags_tid';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Tags (field_ovpred_article_tags) */
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['id'] = 'field_ovpred_article_tags_tid';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['table'] = 'field_data_field_ovpred_article_tags';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['field'] = 'field_ovpred_article_tags_tid';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['operator_id'] = 'field_ovpred_article_tags_tid_op';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['label'] = 'OVPRED Article Tags';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['operator'] = 'field_ovpred_article_tags_tid_op';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['identifier'] = 'field_ovpred_article_tags_tid';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
     4 => 0,
     5 => 0,
   );
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['vocabulary'] = 'ovpred_sub_article_tags';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['vocabulary'] = 'ovpred_article_tags';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['hierarchy'] = 1;
   $handler->display->display_options['pane_title'] = 'OVPRED Articles - Teaser';
   $handler->display->display_options['pane_category']['name'] = 'OVPRED Articles';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -208,7 +208,7 @@ function ovpred_sub_article_views_views_default_views() {
   $handler->display->display_options['defaults']['style_options'] = FALSE;
   $handler->display->display_options['defaults']['row_plugin'] = FALSE;
   $handler->display->display_options['row_plugin'] = 'node';
-  $handler->display->display_options['row_options']['view_mode'] = 'ovpred_sub_article_list';
+  $handler->display->display_options['row_options']['view_mode'] = 'ovpred_article_list';
   $handler->display->display_options['defaults']['row_options'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Content: Sticky */
@@ -235,7 +235,7 @@ function ovpred_sub_article_views_views_default_views() {
   $handler->display->display_options['filters']['type']['table'] = 'node';
   $handler->display->display_options['filters']['type']['field'] = 'type';
   $handler->display->display_options['filters']['type']['value'] = array(
-    'ovpred_sub_article' => 'ovpred_sub_article',
+    'ovpred_article' => 'ovpred_article',
   );
   /* Filter criterion: Content: Promoted to front page */
   $handler->display->display_options['filters']['promote']['id'] = 'promote';
@@ -254,26 +254,26 @@ function ovpred_sub_article_views_views_default_views() {
     4 => 0,
     5 => 0,
   );
-  /* Filter criterion: Content: Tags (field_ovpred_sub_article_tags) */
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['id'] = 'field_ovpred_sub_article_tags_tid';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['table'] = 'field_data_field_ovpred_sub_article_tags';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['field'] = 'field_ovpred_sub_article_tags_tid';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['value'] = '';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['operator_id'] = 'field_ovpred_sub_article_tags_tid_op';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['label'] = 'OVPRED Article Tags';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['operator'] = 'field_ovpred_sub_article_tags_tid_op';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['identifier'] = 'field_ovpred_sub_article_tags_tid';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['expose']['remember_roles'] = array(
+  /* Filter criterion: Content: Tags (field_ovpred_article_tags) */
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['id'] = 'field_ovpred_article_tags_tid';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['table'] = 'field_data_field_ovpred_article_tags';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['field'] = 'field_ovpred_article_tags_tid';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['value'] = '';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['operator_id'] = 'field_ovpred_article_tags_tid_op';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['label'] = 'OVPRED Article Tags';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['operator'] = 'field_ovpred_article_tags_tid_op';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['identifier'] = 'field_ovpred_article_tags_tid';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
     3 => 0,
     4 => 0,
     5 => 0,
   );
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['type'] = 'select';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['vocabulary'] = 'ovpred_sub_article_tags';
-  $handler->display->display_options['filters']['field_ovpred_sub_article_tags_tid']['hierarchy'] = 1;
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['type'] = 'select';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['vocabulary'] = 'ovpred_article_tags';
+  $handler->display->display_options['filters']['field_ovpred_article_tags_tid']['hierarchy'] = 1;
   $handler->display->display_options['pane_title'] = 'OVPRED Articles - List';
   $handler->display->display_options['pane_category']['name'] = 'OVPRED Articles';
   $handler->display->display_options['pane_category']['weight'] = '0';
@@ -286,7 +286,7 @@ function ovpred_sub_article_views_views_default_views() {
   $handler->display->display_options['allow']['title_override'] = 'title_override';
   $handler->display->display_options['allow']['exposed_form'] = 'exposed_form';
   $handler->display->display_options['allow']['fields_override'] = 0;
-  $export['ovpred_sub_articles'] = $view;
+  $export['ovpred_articles'] = $view;
 
   return $export;
 }
