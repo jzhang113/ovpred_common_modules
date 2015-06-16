@@ -111,7 +111,7 @@ function ovpred_articles_field_default_field_bases() {
           'type' => 'none',
         ),
         'target_bundles' => array(
-          'ovpred_sub_article_contact' => 'ovpred_sub_article_contact',
+          'ovpred_article_contact' => 'ovpred_article_contact',
         ),
       ),
       'target_type' => 'node',
