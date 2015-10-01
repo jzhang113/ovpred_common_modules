@@ -1,0 +1,8 @@
+{
+    "name": "its-uofiowa/ovprd_common_modules",
+    "description": "OVPRED shared modules.",
+    "type": "drupal-module",
+    "require": {
+      "composer/installers": "*"
+    }
+}
