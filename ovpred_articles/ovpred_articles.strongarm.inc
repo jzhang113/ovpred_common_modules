@@ -157,6 +157,34 @@ function ovpred_articles_strongarm() {
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'node_revision_delete_number_ovpred_article';
+  $strongarm->value = '3';
+  $export['node_revision_delete_number_ovpred_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_revision_delete_number_ovpred_article_contact';
+  $strongarm->value = '3';
+  $export['node_revision_delete_number_ovpred_article_contact'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_revision_delete_track_ovpred_article';
+  $strongarm->value = 1;
+  $export['node_revision_delete_track_ovpred_article'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'node_revision_delete_track_ovpred_article_contact';
+  $strongarm->value = 1;
+  $export['node_revision_delete_track_ovpred_article_contact'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'node_submitted_ovpred_article';
   $strongarm->value = 0;
   $export['node_submitted_ovpred_article'] = $strongarm;
