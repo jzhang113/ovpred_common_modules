@@ -66,14 +66,6 @@ function ovpred_articles_preprocess_node(&$variables) {
       }
     }
 
-    if(!empty($variables['field_ovpred_article_ext_url'])) {
-      $external = $variables['field_ovpred_article_ext_url'][LANGUAGE_NONE][0]['url'];
-      $variables['node_url'] = $external;
-      if(!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
-        $variables['content']['links']['node']['#links']['node-readmore']['href'] = $external;
-      }
-    }
-
     if(!empty($variables['field_ovpred_article_img_ovr']) || !empty($variables['field_ovpred_article_image'])) {
       $variables['has_image'] = TRUE;
     }
@@ -108,3 +100,20 @@ function ovpred_articles_feeds_after_save(FeedsSource $source, $entity, $item, $
     }
   }
 }
+
+/**
+ * Implements hook_process_node().
+ */
+function ovpred_articles_process_node(&$variables) {
+  if ($variables['type'] == 'ovpred_article') {
+
+    if (!empty($variables['field_ovpred_article_ext_url'])) {
+      $external = $variables['field_ovpred_article_ext_url'][LANGUAGE_NONE][0]['display_url'];
+      $variables['node_url'] = $external;
+      if (!empty($variables['content']['links']['node']['#links']['node-readmore'])) {
+        $variables['content']['links']['node']['#links']['node-readmore']['href'] = $external;
+      }
+    }
+  }
+}
+
