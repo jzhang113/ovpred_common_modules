@@ -179,7 +179,7 @@ function ovpred_blocks_branding_content() {
   $content = array(
     '#type' => 'link',
     '#title' => $image,
-    '#href' => 'http://research.uiowa.edu',
+    '#href' => 'https://research.uiowa.edu',
     '#options' => array(
       'attributes' => array('class' => array('ovpred-main-link')),
       'external' => TRUE,
@@ -253,7 +253,7 @@ function ovpred_blocks_thank_content() {
   $content = array(
     '#type' => 'link',
     '#title' => t('Thank a staff member'),
-    '#href' => 'http://research.uiowa.edu/vpred-staff-recognition-thank-you-program',
+    '#href' => 'https://research.uiowa.edu/vpred-staff-recognition-thank-you-program',
     '#options' => array(
       'attributes' => array('class' => array('ovpred-thank-link')),
       'external' => TRUE,
@@ -344,7 +344,7 @@ function ovpred_blocks_units_content() {
           '#title' => t('Research Administration'),
           '#theme' => 'item_list',
           '#items' => array(
-            l('Office of Research and Economic Development', 'http://research.uiowa.edu/'),
+            l('Office of Research and Economic Development', 'https://research.uiowa.edu/'),
             l('Office of Animal Resources', 'http://animal.research.uiowa.edu/'),
             l('Conflict of Interest in Research Office', 'http://coi.research.uiowa.edu/'),
             l('Division of Sponsored Programs', 'http://dsp.research.uiowa.edu/'),
